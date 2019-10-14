@@ -8,3 +8,8 @@ Description du jeu :
 - Chaques joueurs à 3 vies;
 - On peut accumuler jusqu'à 3 boosts;
 - On peut utiliser 3 types de boosts différents, chaques boosts a un coût différent (1, 2, 3);
+
+Modules :
+- Gestion des evènements clavier
+- Choisir son nom
+- Personnaliser son personnage ?
