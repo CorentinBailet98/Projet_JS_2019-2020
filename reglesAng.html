@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+  <body onkeydown ='getKeyAndMove(event)'>
+    <h1 id="titre">Wrestling Game</h1>
+    <div id="regles">
+    <p class="petit">Press Space to go back <span class="tabulation">Translate to English press "T"</span></p>
+      <ul>
+        <li>
+            The goal of the game is simple, you have to get your opponent out
+            of the red circle</strong> (3 times to win). Or to recover the most <strong>boosts</strong>.<br>
+            For this purpose, boosts will appear randomly
+            on the carpet. You can accumulate up to <strong>3 boosts</strong> at most. <br>
+            A match that lasts 1/2 minutes<burn>
+            If at the end of the time both players are out the
+            same number of times, the winner is the one who has
+            to accumulate the most boosts.
+        </li>
+        <li>
+            <ul>
+                The different functions of the boost: <br>
+                (number of boost(s) to be used)
+                <li>
+                    With 1 boost you can make an <strong>acceleration</strong> on
+                    a short distance.
+                </li>
+                <li>
+                    With 2 boosts you can make a <strong>switch</strong>, the switch
+                    allows you (during a collision with the opponent)
+                    to exchange your position with the opponent's
+                    while keeping the same direction of travel.
+                </li>
+                <li>
+                    With 3 boosts it is possible to make a <strong>propulsion</strong>
+                    that sends the opponent far enough away.
+                    Both players will be "knocked out" after the attack which 
+                    means that you have to press on a button to get
+                    move again.
+                </li>
+            </ul>
+        </li>
+
+      </ul>
+    </div>
+    <script type="text/javascript" src="../js/tradRegles.js"></script>
+    <script type="text/javascript" src="../js/regles.js"></script>
+  </body>
+</html>
