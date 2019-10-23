@@ -1,0 +1,92 @@
+
+
+body{
+  background-color: rgba(209, 209, 209, 0.8);
+  color: black;
+}
+
+menu li{
+  list-style-type: none;
+  text-align: center;
+}
+
+a{
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a:visited{
+  color: rgba(0, 0, 0, 0.7);
+}
+
+a:hover{
+  color: rgba(0, 0, 0, 1);
+}
+
+#Canvas{
+  border:solid 1px black;
+  margin-left: 30%;
+  background-color: rgb(177, 176, 176);
+}
+
+#menu{
+  font-size: 2em;
+  font-style: normal;
+  border: black 1.5px solid;
+  border-radius: 5px 5px 5px 5px;
+  left: center;
+  width: 400px;
+  margin-left: 35%;
+  margin-top: 15%;
+  padding-right: 35px;
+  line-height: 50px;
+  background-color: rgb(177, 176, 176);
+}
+
+#regles, #formulaire, #tournoi{
+  font-size: 1.5em;
+  font-style: normal;
+  border: black 1.5px solid;
+  border-radius: 5px 5px 5px 5px;
+  width: 800px;
+  margin-left: 25%;
+  background-color: rgb(177, 176, 176);
+  line-height: 33px;
+}
+
+#titre{
+  line-height: 10px;
+  text-align: center;
+  font-size: 4em;
+  color: black;
+}
+
+.petit{
+  line-height: 10px;
+  font-style: italic;
+  font-size: 0.5em;
+  padding-left: 40px;
+}
+
+.petit2{
+  font-style: italic;
+  font-size: 0.7em;
+  padding-left: 47%;
+}
+
+#formulaire{
+  width: 550px;
+  padding-left: 15%;
+}
+
+#boutonEnvoie{
+  padding-bottom: 10px;
+  padding-left: 175px;
+}
+
+.tabulation{
+  margin-left: 450px;
+}
+
+.tabulation1{
+  margin-left: 350px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+  <body onkeydown ='getKeyAndMove(event)'>
+    <h1 id="titre">Wrestling Game</h1>
+    <div id="regles">
+    <p class="petit">Appuyer sur Espace pour revenir en arrière <span class="tabulation1">Traduire en anglais appuyez sur "T"</span></p>
+      <ul>
+        <li>
+            Le but du jeu est simple, il faut<strong> sortir son adversaire
+            du cercle rouge</strong> (3 fois pour gagner). Ou récupérer le plus de <strong>boosts</strong>.<br>
+            Pour cela des bonnus (boosts) apparaîtrons aléatoirement
+            sur le tapis. Vous pouvez accumuler jusqu'à <strong>3  boosts</strong> au maximum.<br>
+            Un match dure 3 minutes<br>
+            Si à la fin du chrono les deux joueurs sont sortis le
+            même nombre de fois, le gagnant est celui qui a
+            accumulé le plus de boosts.
+        </li>
+        <li>
+            <ul>
+                Les différentes fonctions du boost :<br>
+                (nbr de boost(s) à utiliser)
+                <li>
+                    Avec 1 boost vous pouvez faire une <strong>accéléation</strong> sur
+                    une courte distance.
+                </li>
+                <li>
+                    Avec 2 boosts vous pouvez faire un <strong>switch</strong>, le switch
+                    vous permet (lors d'une collision avec l'adversaire)
+                    d'échanger votre position avec celle de l'adversaire
+                    tout en gardant la même direction de déplacement.
+                </li>
+                <li>
+                    Avec 3 boosts il est possible de faire une <strong>propulsion</strong>
+                    qui envoie l'adversaire assez loin.
+                    Les deux joueurs seront "sonnés" aprés l'attaque ce qui 
+                    veut dire qu'il faut rappuyer sur une touche pour se
+                    déplacer à nouveau.
+                </li>
+            </ul>
+        </li>
+
+      </ul>
+    </div>
+    <script type="text/javascript" src="../js/tradAngRegles.js"></script>
+    <script type="text/javascript" src="../js/regles.js"></script>
+  </body>
+</html>
