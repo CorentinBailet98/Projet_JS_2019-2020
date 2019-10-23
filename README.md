@@ -1,4 +1,5 @@
 # Projet_JS_2019-2020
+Ce projet est réalisé par BAILET Corentin et GRISERI Pierre.
 Dans ce répertoire il y aura tous les codes qui feront parti du projet en Javascript dans la matière Gestion de Projet.
 
 Notre projet consiste à faire un jeu de combat en 1v1, le temps de jeu d'une partie est assez court ce qui permet de pouvoir y jouer à n'importe quelle moment de la journée.
