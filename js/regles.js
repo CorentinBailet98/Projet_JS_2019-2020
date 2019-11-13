@@ -40,39 +40,43 @@ function getKeyAndMove(e) {
         default:
     }
 }
-var Op = true;
-var OpAn = true;
-var Re = true;
-var ReAn = true;
-var waitTime = true;
 
+let appuye = false;
 //POUR LE GAMEPAD
 function checkButtons(gamepad) {
     if(gamepad === undefined) return;
     if(!gamepad.connected) return;
-    if(gamepad.buttons[0].pressed && waitTime){
-        waitTime = false;
+    console.log(gamepad.buttons[0].value+" "+appuye+" "+pageReglesAng+" "+pageRegles);
+    if(gamepad.buttons[0].pressed ){
+        appuye = true;
+    }
       //console.log("A");
-        if (pageOptionAng == 0 && Op){
+    if(gamepad.buttons[0].value == 0 && appuye){
+        if (pageOptionAng == 0){
             Op = false;
-            pageOption = 0;
-            //RedirectionPage("options.html");
+            pageOption = 3;
+                //RedirectionPage("options.html");
         }
-        else if(pageOption == 0 && OpAn){
+        else if(pageOption == 0){
             OpAn = false;
-            pageOption = 1;
-            //RedirectionPage("optionsAng.html");
+            pageOptionAng = 3;
+                //RedirectionPage("optionsAng.html");
         }
-        else if (pageReglesAng == 0 && Re){
+        else if (pageReglesAng == 0){
             Re = false;
-            pageRegles = 0;
-            //RedirectionPage("regles.html");
+            pageRegles = 3;
+                //RedirectionPage("regles.html");
         }
-        else if (pageRegles == 0 && ReAn){
+        else if (pageRegles == 0){
             ReAn = false;
-            pageRegles = 1;
-            //RedirectionPage("reglesAng.html");
+            pageReglesAng = 3;
+                //RedirectionPage("reglesAng.html");
         }
+        appuye = false;
+    }
+    
+    else if(gamepad.buttons[0].unpressed){
+        console.log("unpressed");
     }
     if(gamepad.buttons[1].pressed){
         //console.log("B");
@@ -109,26 +113,17 @@ function anime60fps(){
         load++;
     }*/
     checkButtons(gamepad);
-    if(!waitTime){
-        waitTime = true;
-        
-        if(!Op){
-            Op = true;
-            RedirectionPage("options.html")
-        }
-        if(!OpAn){
-            OpAn = true;
-            RedirectionPage("optionsAng.html")
-        }
-        if(!Re){
-            Re = true;
-            RedirectionPage("regles.html")
-        }
-        if(!ReAn){
-            ReAn = true;
-            RedirectionPage("reglesAng.html")
-        }
-         
-    } 
+    if(pageRegles == 3){
+        RedirectionPage("regles.html");
+    }
+    if(pageReglesAng == 3){
+        RedirectionPage("reglesAng.html");
+    }
+    if(pageOption == 3){
+        RedirectionPage("options.html");
+    }
+    if(pageOptionAng == 3){
+        RedirectionPage("optionsAng.html");
+    }
     requestAnimationFrame(anime60fps);
 }

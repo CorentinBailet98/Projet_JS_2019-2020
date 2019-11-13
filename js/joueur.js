@@ -60,8 +60,8 @@ class joueur{
       this.y += this.dy*3;
     }
     else{
-      this.x += this.dx;
-      this.y += this.dy;
+      this.x += this.dx*4;
+      this.y += this.dy*4;
     }
   }
 

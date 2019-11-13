@@ -1,0 +1,4 @@
+git pull
+git add .
+git commit -m "blabla"      #(:q) pour quitter la fenêtre ouverte
+git push
