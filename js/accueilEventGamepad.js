@@ -1,5 +1,7 @@
 
 //POUR LE GAMEPAD
+
+
 function checkButtons(gamepad) {
   
     if(gamepad === undefined) return;

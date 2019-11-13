@@ -1,0 +1,35 @@
+Début du projet, je soumet mon idée de jeu à Pierre :
+    Un jeu de Lutte ou le but est de sortir son adversaire du cercle.
+
+On commence la conception :
+ - Partie graphique (tapis, cercles)
+ - Création de la classe joueur (fonctions : draw, move, deplacement, isColision, ...)
+
+ Les joueurs ne pouront se déplacer que en x uniquement ou en y uniquement.
+ Lorsque deux joueurs sont en colision ils reculent un petit peu.
+ Création de boost :
+ - Tous les x secondes un point vert appartait, il représente un boost
+ - Si le joueur passe dessus alors il accumule 1 boost
+    * Avec un boost le joueur peut faire une accélération sur une courte distance
+    * Avec deux boosts le joueur peut faire un switch, c'est à dire que lorsqu'il y a une colision les deux joueurs inversent leur position mais gardent leur direction
+    * Avec trois boosts le joueur peut faire une percution à l'autre joueur et le projetter loin
+
+Pour gérer les mouvement des joueurs nous avons utiliser les key_code pour détecter l'appuie sur les flèches,
+ainsi pour faire les "attaques" avec les boost il suffit d'associer une touche de clavier à une attaque.
+
+Nous avons ajouter un nombre de vie aux joueurs, ainsi pour gagner un match il faut sortir 3 fois l'aversaire (3 vies).
+Aprés un match gagné il y a l'affichage du gagnant et la proposition de rejouer en appuyant sur "Entrer".
+
+
+Le plus dur pour l'instant a été d'ajouter la gestion du gamepad pour jouer avec.
+
+Aprés cela nous avons commencer a coder l'interface ;
+Menu :
+ - 1v1
+ - Tournois
+ - Option (commandes)
+ - Règles
+
+Lors du choix du mode 1v1 on peut désormais choisir son Pseudo (J1 &J2)
+
+Nous nous attaquons maintenant au mode tournois et à l'IA.
