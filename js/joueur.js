@@ -1,13 +1,14 @@
 
 //Classe joueur
 class joueur{
-  constructor(x,y,color,hair,acc,ctx,nbrBoost,numberPlayer,scorePlayer,matchPerdu,IA,nbrBoostRecolter){
+  constructor(x,y,color,hair,acc,ctx,nbrBoost, lvlEndurance, numberPlayer,scorePlayer,matchPerdu,IA,nbrBoostRecolter){
     this.x = x;
     this.y = y;
     this.width = 25;
     this.height = 50;
     this.hair = hair;
     this.nbrBoost = nbrBoost;
+    this.lvlEndurance = lvlEndurance
     this.numberPlayer = numberPlayer;
     this.scorePlayer = scorePlayer;
     this.matchPerdu = matchPerdu;

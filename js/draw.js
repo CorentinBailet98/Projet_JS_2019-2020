@@ -115,7 +115,50 @@ function drawRing() {
     ctx.restore();
 }
 
-//Fonction qui permet de faire spowner des petit cercle sur
+
+  //EN TEST /!\ /!\ Affichage de la barre d'endurance
+  function lvlBoost(joueur, drawx){
+    ctx.save();
+    ctx.translate(drawx,25);
+    ctx.font = "15pt Calibri";
+    ctx.fillStyle = "black";
+    if (joueur.numberPlayer == 1){
+      ctx.strokeStyle = "red";
+      ctx.strokeText(pseudoJoueur[joueur.numberPlayer - 1], 0, 0);
+    }
+    else if(joueur.numberPlayer == 2){
+      ctx.strokeStyle = "blue";
+      ctx.strokeText(pseudoJoueur[joueur.numberPlayer - 1], 0, 0);
+    }
+    ctx.fillText(pseudoJoueur[joueur.numberPlayer - 1], 0, 0);
+    ctx.translate(0,15);
+    ctx.strokeStyle='black';
+    ctx.fillStyle= "#F0FFEE";
+    ctx.lineWidth=1;
+    roundedRect(ctx, 0, 0, 60, 10, 2, true, true);
+    if(joueur.nbrBoost == 1){
+      ctx.fillStyle= "#B6FFAC";
+      ctx.lineWidth=0.5;
+      roundedRect(ctx, 0, 1, 20, 8, 2, true, true);
+    }
+    if(joueur.nbrBoost == 2){
+      ctx.fillStyle= "#8AFD79";
+      ctx.lineWidth=0.5;
+      roundedRect(ctx, 0, 1, 40, 8, 2, true, true);
+    }
+    if(joueur.nbrBoost >= 3){
+      ctx.fillStyle= "#2DEE20";
+      ctx.lineWidth=0.5;
+      roundedRect(ctx, 0, 1, 60, 8, 2, true, true);
+    }
+    ctx.restore();
+}
+// FIN FONCTION /!\ /!\ 
+
+
+
+
+//Fonction qui permet de faire spawner des petit cercle sur
 //le tapis (représente des booster pour le sprint)
 function spawnRandomCircle(cx,cy){
     

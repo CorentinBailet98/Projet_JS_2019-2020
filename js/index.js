@@ -195,12 +195,12 @@ function init() {
   canvas = document.querySelector('#Canvas');
   ctx = canvas.getContext("2d");
   //créer 2 joueurs
-  players.push(new joueur(250, 275, "red", "yellow", accP1, ctx, boostDepartP1, 1, scorePointP1,0,false,0));
+  players.push(new joueur(250, 275, "red", "yellow", accP1, ctx, boostDepartP1, 100, 1, scorePointP1,0,false,0));
   if(findPseudo("JouIA")){
-    players.push(new joueur(325, 275, "blue", "brown", accP2, ctx, boostDepartP2, 2, scorePointP2,0,true,0));
+    players.push(new joueur(325, 275, "blue", "brown", accP2, ctx, boostDepartP2, 100, 2, scorePointP2,0,true,0));
   }
   else{
-    players.push(new joueur(325, 275, "blue", "brown", accP2, ctx, boostDepartP2, 2, scorePointP2,0,false,0));
+    players.push(new joueur(325, 275, "blue", "brown", accP2, ctx, boostDepartP2, 100, 2, scorePointP2,0,false,0));
 }
   
   requestAnimationFrame(anime60fps);

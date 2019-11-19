@@ -109,6 +109,7 @@ function getKeyAndMove(e) {
         //Player 1 stop !
         case 32: //space key
             players[0].deplacement(0,0);
+            //TO DO : Tant qu'on est arrêté on recup de l'energie / VAR TOUCHE ESPACEs
 			break;
         case 78: //N key (acceleration P1)
             if (players[0].nbrBoost > 0 ){

@@ -17,6 +17,7 @@ function findPseudo(sVariable) {
   // Aucune variable de trouvée.
   return(false);
 }
+
 //Redirige vers une autre page
 function RedirectionPage(lien){
     document.location.href=lien; 
@@ -105,20 +106,40 @@ if(players[p0].isColision(players[p1])){
   if (switchPlayer && !stoneAttack1 && !stoneAttack2){
     switchPlayers();
     switchPlayer = false;
+    players[p0].lvlEndurance -= 30;
+    players[p1].lvlEndurance -= 30;
   }
   else if (stoneAttack1){
     bigAttack(0,1);
     stoneAttack1 = false;
+    
+    if(players[p0].lvlEndurance - 35 <= 0)  players[p0].lvlEndurance = 0;
+    else players[p0].lvlEndurance -= 35; 
+    
+    if(players[p1].lvlEndurance - 50 <= 0)  players[p1].lvlEndurance = 0;
+    else players[p1].lvlEndurance -= 50;
   }
   else if (stoneAttack2){
     bigAttack(1,0);
     stoneAttack2 = false;
+
+    if(players[p0].lvlEndurance - 50 < 0)  players[p0].lvlEndurance = 0;
+    else players[p0].lvlEndurance -= 50; 
+    
+    if(players[p1].lvlEndurance - 35 < 0)  players[p1].lvlEndurance = 0;
+    else players[p1].lvlEndurance -= 35;
+
   }
   else {
     players[p0].x = players[p0].x + players[p1].dx*(recul1 + 10);
     players[p0].y = players[p0].y + players[p1].dy*(recul1 + 10);
     players[p1].x = players[p1].x + players[p0].dx*(recul0 + 10);
     players[p1].y = players[p1].y + players[p0].dy*(recul0 + 10);
+    
+    if(players[p0].lvlEndurance - 10 <= 0) players[p0].lvlEndurance = 0;
+    else players[p0].lvlEndurance -= 10;
+    if(players[p1].lvlEndurance - 10 <= 0) players[p1].lvlEndurance = 0;
+    else players[p1].lvlEndurance -= 10;
   } 
 }
 }
