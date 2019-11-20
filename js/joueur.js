@@ -1,14 +1,14 @@
 
 //Classe joueur
 class joueur{
-  constructor(x,y,color,hair,acc,ctx,nbrBoost, lvlEndurance, numberPlayer,scorePlayer,matchPerdu,IA,nbrBoostRecolter){
+  constructor(x,y,color,hair,body,acc,ctx,nbrBoost,numberPlayer,scorePlayer,matchPerdu,IA,nbrBoostRecolter){
     this.x = x;
     this.y = y;
     this.width = 25;
     this.height = 50;
     this.hair = hair;
+    this.body = body;
     this.nbrBoost = nbrBoost;
-    this.lvlEndurance = lvlEndurance
     this.numberPlayer = numberPlayer;
     this.scorePlayer = scorePlayer;
     this.matchPerdu = matchPerdu;
@@ -25,7 +25,7 @@ class joueur{
   draw(){
     ctx.save();
     ctx.strokeStyle='black';
-    ctx.fillStyle= "#F7B041";
+    ctx.fillStyle= this.body;
     ctx.lineWidth=0.5;
     roundedRect(ctx, this.x, this.y, this.width, this.height, 2, true, true);
     ctx.strokeStyle='black';
@@ -33,7 +33,7 @@ class joueur{
     ctx.lineWidth=0.5;
     roundedRect(ctx, this.x, this.y+10, this.width, this.height-20, 2, true, true);
     ctx.strokeStyle='black';
-    ctx.fillStyle= "#F7B041";
+    ctx.fillStyle= this.body;
     ctx.lineWidth=0.5;
     roundedRect(ctx, this.x+3, this.y+13, this.width-6, this.height-26, 5, true, true);
     ctx.beginPath();
@@ -57,12 +57,12 @@ class joueur{
   move(){
     
     if(this.acc){
-      this.x += this.dx*3;
-      this.y += this.dy*3;
-    }
-    else{
       this.x += this.dx*4;
       this.y += this.dy*4;
+    }
+    else{
+      this.x += this.dx*1.5;
+      this.y += this.dy*1.5;
     }
   }
 
@@ -76,17 +76,17 @@ class joueur{
     this.acc = parametreIA[2];
     this.nbrBoost = parametreIA[3]
     if(parametreIA[2] == true){
-      this.x += parametreIA[0]*3;
-      this.y += parametreIA[1]*3;
+      this.x += parametreIA[0]*4;
+      this.y += parametreIA[1]*4;
     }
     else if(parametreIA[2] == false){
       //console.log(this.dx)
-      this.x += parametreIA[0];
-      this.y += parametreIA[1];
+      this.x += parametreIA[0]*1.5;
+      this.y += parametreIA[1]*1.5;
     }
     else{
-      this.x += parametreIA[0];
-      this.y += parametreIA[1];
+      this.x += parametreIA[0]*1.5;
+      this.y += parametreIA[1]*1.5;
     }
   }
   
